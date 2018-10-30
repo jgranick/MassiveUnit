@@ -64,7 +64,7 @@ class TestResult
 	/**
 	 * The fully qualified location of this test. (i.e. package.ClassName#method)
 	 */
-	public var location(get_location, null):String;
+	public var location(get, null):String;
 	private function get_location():String 
 	{
 		return (name == "" && className == "") ? "" : className + "#" + name;
@@ -90,7 +90,7 @@ class TestResult
 	 */
 	public var error:Dynamic;
 
-	public var type(get_type, null):TestResultType;
+	public var type(get, null):TestResultType;
 	/**
 	 * Class constructor.
 	 */

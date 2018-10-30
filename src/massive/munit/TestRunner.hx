@@ -99,7 +99,7 @@ class TestRunner implements IAsyncDelegateObserver
      */
     public var completionHandler:Bool -> Void;
 
-    public var clientCount(get_clientCount, null):Int;
+    public var clientCount(get, null):Int;
     private function get_clientCount():Int { return clients.length; }
 
     public var running(default, null):Bool;
@@ -120,7 +120,7 @@ class TestRunner implements IAsyncDelegateObserver
     private var asyncDelegate:AsyncDelegate;
     private var suiteIndex:Int;
 
-    public var asyncFactory(default, set_asyncFactory):AsyncFactory;
+    public var asyncFactory(default, set):AsyncFactory;
     private function set_asyncFactory(value:AsyncFactory):AsyncFactory
     {
         if (value == asyncFactory) return value;
