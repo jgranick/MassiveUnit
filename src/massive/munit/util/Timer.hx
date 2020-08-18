@@ -57,7 +57,11 @@ package massive.munit.util;
 #if neko
 import neko.vm.Thread;
 #elseif cpp
+#if haxe4
+import sys.thread.Thread;
+#else
 import cpp.vm.Thread;
+#end
 #elseif java
 import java.vm.Thread;
 #end
